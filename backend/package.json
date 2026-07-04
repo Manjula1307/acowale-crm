@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/server.ts",
-    "seed:admin": "ts-node-dev src/scripts/seedAdmin.ts"
+    "seed:admin": "ts-node-dev src/scripts/seedAdmin.ts",
+    "db:setup": "ts-node-dev --transpile-only src/scripts/runSchema.ts"
   },
   "keywords": [],
   "author": "",

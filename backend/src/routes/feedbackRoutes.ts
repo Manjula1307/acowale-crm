@@ -1,8 +1,9 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
 import rateLimit from 'express-rate-limit';
-import { submitFeedback, getFeedback, getSummary } from '../controllers/feedbackController';
+import { submitFeedback, getFeedback, getSummary, updateStatus } from '../controllers/feedbackController';
 import { requireAuth } from '../middleware/authMiddleware';
+
 
 const router = Router();
 
@@ -28,5 +29,7 @@ const validateFeedback = [
 router.post('/', submitLimiter, validateFeedback, submitFeedback);
 router.get('/', requireAuth, getFeedback);
 router.get('/summary', requireAuth, getSummary);
+router.patch('/:id/status', requireAuth, updateStatus);
+
 
 export default router;

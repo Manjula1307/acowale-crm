@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+:root {
+  --ink: #12142B;
+  --paper: #FAFAF9;
+  --surface: #FFFFFF;
+  --cobalt: #3654E0;
+  --cobalt-light: #EEF1FD;
+  --amber: #F0803C;
+  --border: #E7E7E4;
+  --text-secondary: #6B6B76;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}

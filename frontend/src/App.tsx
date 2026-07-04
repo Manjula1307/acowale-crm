@@ -3,6 +3,7 @@ import FeedbackForm from './pages/FeedbackForm';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import FeedbackList from './pages/FeedbackList';
 
 function App() {
   return (
@@ -15,6 +16,14 @@ function App() {
           element={
             <ProtectedRoute>
               <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/feedback"
+          element={
+            <ProtectedRoute>
+              <FeedbackList  />
             </ProtectedRoute>
           }
         />
